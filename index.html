@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAMPECAM — Cámara Peruana de Conciliación, Arbitraje y Mediación</title>
+<meta name="description" content="20 años formando conciliadores extrajudiciales, árbitros y mediadores. Centros de arbitraje, conciliación y mediación en Cercado de Lima.">
+<meta property="og:title" content="CAMPECAM — Conciliación, Arbitraje y Mediación">
+<meta property="og:description" content="20 años formando conciliadores extrajudiciales, árbitros y mediadores en Lima.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0F1E33">
+<link rel="icon" type="image/png" href="img/campecam-logo.png">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F7F9FC;font-family:'Manrope',system-ui,sans-serif;color:#0F172A}
+*{box-sizing:border-box}
+a{color:#2563EB}a:hover{color:#0B1530}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.serif{font-family:'Plus Jakarta Sans',system-ui,sans-serif;letter-spacing:-.025em}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#0F172A;text-decoration:none;font-size:15px;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover{color:#2563EB;border-bottom-color:#FBBF24}
+.photo{display:block;width:100%;height:100%;object-fit:cover}
+.photo-wrap{position:relative;overflow:hidden;background:#0B1530}
+.photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,51,0) 55%,rgba(15,30,51,.35) 100%);pointer-events:none}
+.burger{display:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.stats > div + div{border-left:1px solid rgba(255,255,255,.14)}
+.ph{position:relative;overflow:hidden;background-color:#0B1530;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px);display:flex;align-items:flex-end;justify-content:flex-start}
+.ph-label{margin:14px;padding:6px 10px;border-radius:6px;background:rgba(15,30,51,.85);color:#E2E8F0;font-size:12px;font-weight:600;letter-spacing:.02em}
+.ph-in{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.photo.ph-in{transform-origin:center}
+.card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(15,30,51,.45)}
+.card:hover .ph-in{transform:scale(1.06)}
+.btn{transition:transform .2s,background-color .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold:hover{background:#FCD34D !important;color:#0B1530 !important}
+.btn-line:hover{background:rgba(255,255,255,.08) !important;color:#FFFFFF !important}
+.link-arrow{display:inline-flex;gap:8px;align-items:center;font-weight:700;text-decoration:none;color:#2563EB}
+.link-arrow:hover{color:#0B1530;gap:12px}
+.ic{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.marquee{overflow:hidden;white-space:nowrap}
+.track{display:flex;width:max-content}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+[hidden]{display:none !important}
+.faq-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;padding:clamp(14px,2.4vh,20px) 0;cursor:pointer;text-align:left;font:inherit;color:#0B1530}
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:50}
+.sec{padding-top:clamp(48px,8vh,96px) !important;padding-bottom:clamp(48px,8vh,96px) !important}
+.h1{font-size:clamp(36px,min(4.4vw,7vh),58px) !important}
+.h2{font-size:clamp(28px,min(3.2vw,5.4vh),42px) !important}
+.hero-media{height:clamp(280px,calc(100vh - 300px),500px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.lead{font-size:clamp(15px,2.2vh,17px) !important}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 0 0 20px rgba(37,211,102,0)}}
+@keyframes shimmer{to{background-position:200% 0}}
+@media (prefers-reduced-motion:no-preference){
+.in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.5s}
+.seal{animation:spin 30s linear infinite}
+.float{animation:floaty 4.5s ease-in-out infinite alternate}
+.float2{animation:floaty 5.5s ease-in-out -2s infinite alternate}
+.track{animation:marquee 38s linear infinite}
+.wa-fab a{animation:pulse 2.2s ease-out infinite}
+.gold-text{background:linear-gradient(90deg,#FCD34D,#FEF3C7,#FCD34D);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:shimmer 6s linear infinite}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.is-in{opacity:1;transform:none}
+}
+@media (max-width:960px){
+.hero-grid,.g2{grid-template-columns:1fr}
+.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:1fr}
+.nav-links,.nav-cta{display:none !important}
+.burger{display:inline-flex}
+.h1{font-size:44px !important}
+.h2{font-size:34px !important}
+.sec{padding-top:64px !important;padding-bottom:64px !important}
+.hero-media{height:auto;aspect-ratio:4 / 3}
+}
+@media (max-width:560px){
+.g4{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr}
+.stats > div + div{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+.h1{font-size:38px !important}
+.topbar-hide{display:none !important}
+}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #F7F9FC;">
+
+<!-- Barra superior -->
+<div style="background: #060E22; color: #CBD5E1; font-size: 13px;">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap;">
+<span>Jr. Camaná 615, Of. 205 · Cercado de Lima</span>
+<div style="display: flex; gap: 22px; align-items: center;">
+<a href="mailto:campecam@gmail.com" class="topbar-hide" style="color: #CBD5E1; text-decoration: none;">campecam@gmail.com</a>
+<a href="tel:+5114275172" style="color: #CBD5E1; text-decoration: none;">(01) 427-5172</a>
+</div>
+</div>
+</div>
+
+<!-- Navegación -->
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E8F0; box-shadow: 0 10px 30px -22px rgba(15,30,51,.45);">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; height: 72px; gap: 24px;">
+<a href="#inicio" aria-label="CAMPECAM — inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+<img src="img/campecam-logo.png" alt="Logo CAMPECAM — Cámara Peruana de Conciliación, Arbitraje y Mediación" style="height: 52px; width: auto; display: block;">
+</a>
+<nav class="nav-links" aria-label="Principal">
+<a href="#nosotros">Nosotros</a>
+<a href="#formacion">Formación</a>
+<a href="#centros">Centros</a>
+<a href="#preguntas">Preguntas</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<div style="display: flex; gap: 12px; align-items: center;">
+<a class="btn btn-gold nav-cta" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="display: inline-flex; align-items: center; gap: 8px; background: #FBBF24; color: #0B1530; padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; min-height: 44px;">Inscríbete</a>
+<button class="burger" id="menuBtn" aria-controls="mobileMenu" aria-label="Abrir menú" aria-expanded="false" style="width: 44px; height: 44px; border-radius: 10px; border: 1px solid #CBD5E1; background: #FFFFFF; color: #0B1530; align-items: center; justify-content: center; cursor: pointer;">
+<svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+</div>
+<nav id="mobileMenu" hidden aria-label="Menú móvil" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 8px 24px 20px; display: flex; flex-direction: column;">
+<a href="#nosotros" class="mm-link" style="color: #0B1530; text-decoration: none; padding: 14px 0; font-size: 17px; font-weight: 600; border-bottom: 1px solid #EEF2F7;">Nosotros</a>
+<a href="#formacion" class="mm-link" style="color: #0B1530; text-decoration: none; padding: 14px 0; font-size: 17px; font-weight: 600; border-bottom: 1px solid #EEF2F7;">Formación</a>
+<a href="#centros" class="mm-link" style="color: #0B1530; text-decoration: none; padding: 14px 0; font-size: 17px; font-weight: 600; border-bottom: 1px solid #EEF2F7;">Centros</a>
+<a href="#preguntas" class="mm-link" style="color: #0B1530; text-decoration: none; padding: 14px 0; font-size: 17px; font-weight: 600; border-bottom: 1px solid #EEF2F7;">Preguntas</a>
+<a href="#contacto" class="mm-link" style="color: #0B1530; text-decoration: none; padding: 14px 0; font-size: 17px; font-weight: 600;">Contacto</a>
+<a target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="margin-top: 12px; text-align: center; background: #FBBF24; color: #0B1530; padding: 14px 20px; border-radius: 999px; font-weight: 700; text-decoration: none;">Inscríbete por WhatsApp</a>
+</nav>
+</header>
+
+<!-- Hero -->
+<section id="inicio" style="background: #0B1530; color: #F7F9FC; overflow: hidden;">
+<div class="wrap hero-grid sec" style="padding-top: 96px; padding-bottom: 120px;">
+<div style="display: flex; flex-direction: column; gap: clamp(16px, 3vh, 26px);">
+<span class="in" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid rgba(252,211,77,.45); border-radius: 999px; color: #FCD34D; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;">
+<span style="width: 7px; height: 7px; border-radius: 50%; background: #FCD34D;"></span>
+Cámara Peruana de Conciliación, Arbitraje y Mediación
+</span>
+<h1 class="h1 serif in d1" style="margin: 0; font-size: 64px; line-height: 1.06; font-weight: 800; letter-spacing: -.03em; color: #FFFFFF;">20 años formando a quienes <span class="gold-text" style="color: #FCD34D;">resuelven conflictos</span></h1>
+<p class="in d2 lead" style="margin: 0; max-width: 540px; font-size: 18px; line-height: 1.6; color: #CBD5E1;">Formamos conciliadores extrajudiciales, árbitros y mediadores, y administramos justicia a través de nuestros centros de arbitraje, conciliación y mediación. Dos décadas superando las expectativas de nuestros alumnos y clientes.</p>
+<div class="in d3" style="display: flex; gap: 14px; flex-wrap: wrap;">
+<a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="display: inline-flex; align-items: center; gap: 10px; background: #FBBF24; color: #0B1530; padding: 16px 26px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none;">
+<svg viewBox="0 0 24 24" width="20" height="20" class="ic" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.1A8 8 0 1 1 20 12z"></path></svg>
+Contáctanos por WhatsApp
+</a>
+<a class="btn btn-line" href="#formacion" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,.3); color: #F7F9FC; padding: 16px 26px; border-radius: 999px; font-weight: 600; font-size: 16px; text-decoration: none;">Ver programas</a>
+</div>
+<div class="in d4" style="display: flex; gap: 22px; flex-wrap: wrap; color: #94A3B8; font-size: 14px; padding-top: 8px;">
+<span style="display: inline-flex; gap: 8px; align-items: center;"><svg viewBox="0 0 24 24" width="18" height="18" class="ic" style="color: #FCD34D;" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Conciliadores extrajudiciales</span>
+<span style="display: inline-flex; gap: 8px; align-items: center;"><svg viewBox="0 0 24 24" width="18" height="18" class="ic" style="color: #FCD34D;" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Árbitros</span>
+<span style="display: inline-flex; gap: 8px; align-items: center;"><svg viewBox="0 0 24 24" width="18" height="18" class="ic" style="color: #FCD34D;" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Mediadores</span>
+</div>
+</div>
+
+<div class="in d2" style="position: relative; padding: 24px 24px 24px 0;">
+<div class="photo-wrap hero-media" style="border-radius: 28px 28px 120px 28px; border: 1px solid rgba(252,211,77,.35);">
+<img class="photo" src="img/hero.jpg" alt="Promoción de egresados de CAMPECAM con togas y estolas doradas" style="object-position: 40% 30%;">
+</div>
+<div class="seal" style="position: absolute; top: -10px; left: -48px; width: 150px; height: 150px; border-radius: 50%; background: #FBBF24; color: #0B1530; display: flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 150 150" width="150" height="150" role="img" aria-label="20 años de experiencia">
+<defs><path id="sealpath" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"></path></defs>
+<text style="font-family: Manrope, sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: 3.2px; fill: #0B1530;"><textPath href="#sealpath">VEINTE AÑOS DE EXPERIENCIA · CAMPECAM · </textPath></text>
+</svg>
+<span class="serif" style="position: absolute; font-size: 40px; font-weight: 700; line-height: 1;">20</span>
+</div>
+<div class="float" style="position: absolute; right: -8px; bottom: 45%; background: #FFFFFF; color: #0B1530; border-radius: 16px; padding: 14px 18px; display: flex; gap: 12px; align-items: center; box-shadow: 0 20px 40px -18px rgba(0,0,0,.5);">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><path d="M14 4l6 6M12 6l6 6M9 9l6 6M4 20l7-7"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column;"><strong style="font-size: 15px;">Arbitraje</strong><span style="font-size: 13px; color: #475569;">Civil, comercial e internacional</span></span>
+</div>
+<div class="float2" style="position: absolute; left: -20px; bottom: 24px; background: #FFFFFF; color: #0B1530; border-radius: 16px; padding: 14px 18px; display: flex; gap: 12px; align-items: center; box-shadow: 0 20px 40px -18px rgba(0,0,0,.5);">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><path d="M7 11l3-3 3 2 4-4M3 13l4 4 3-1 4 3 7-7"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column;"><strong style="font-size: 15px;">Conciliación</strong><span style="font-size: 13px; color: #475569;">Extrajudicial y familiar</span></span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Cinta en movimiento -->
+<div class="marquee" style="background: #FBBF24; color: #0B1530; padding: 18px 0;" aria-hidden="true">
+<div class="track serif" style="font-size: 22px; font-weight: 600;">
+<span style="padding: 0 28px;">Conciliación extrajudicial</span><span>✦</span>
+<span style="padding: 0 28px;">Arbitraje civil y comercial</span><span>✦</span>
+<span style="padding: 0 28px;">Mediación</span><span>✦</span>
+<span style="padding: 0 28px;">Conciliación familiar</span><span>✦</span>
+<span style="padding: 0 28px;">Arbitraje internacional</span><span>✦</span>
+<span style="padding: 0 28px;">Seminarios y fórums</span><span>✦</span>
+<span style="padding: 0 28px;">Talleres</span><span>✦</span>
+<span style="padding: 0 28px;">Conciliación extrajudicial</span><span>✦</span>
+<span style="padding: 0 28px;">Arbitraje civil y comercial</span><span>✦</span>
+<span style="padding: 0 28px;">Mediación</span><span>✦</span>
+<span style="padding: 0 28px;">Conciliación familiar</span><span>✦</span>
+<span style="padding: 0 28px;">Arbitraje internacional</span><span>✦</span>
+<span style="padding: 0 28px;">Seminarios y fórums</span><span>✦</span>
+<span style="padding: 0 28px;">Talleres</span><span>✦</span>
+</div>
+</div>
+
+<!-- Nosotros -->
+<section id="nosotros" class="sec" style="padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap g2" style="align-items: center;">
+<div class="reveal" style="position: relative;">
+<div class="photo-wrap" style="aspect-ratio: 4 / 3; max-height: calc(100vh - 200px); border-radius: 24px;">
+<img class="photo" src="img/seminarios.jpg" alt="Alumnos y docentes de CAMPECAM en el aula" style="object-position: 70% 50%;">
+</div>
+<div style="position: absolute; right: -16px; bottom: -28px; background: #0B1530; color: #F7F9FC; border-radius: 20px; padding: 22px 26px; max-width: 260px; box-shadow: 0 24px 40px -22px rgba(15,30,51,.6);">
+<p class="serif" style="margin: 0; font-size: 20px; line-height: 1.35;">“Una casa de estudios necesaria, cordial y a tu servicio.”</p>
+</div>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px;">
+<span style="color: #2563EB; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Nosotros</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 46px; line-height: 1.12; font-weight: 800; color: #0B1530;">Formamos profesionales que resuelven conflictos sin juicio</h2>
+<p class="lead" style="margin: 0; font-size: 17px; line-height: 1.65; color: #334155;">Formamos conciliadores extrajudiciales, árbitros, mediadores y especialistas legales, y administramos justicia delegada a través de nuestros centros de arbitraje, conciliación y mediación.</p>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 6px;">
+<div style="display: flex; gap: 14px; padding: 16px 18px; background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0;">
+<span style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: #0B1530; color: #FCD34D; display: inline-flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+</span>
+<div><h3 style="margin: 0 0 6px; font-size: 17px; color: #0B1530;">Visión</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569;">Ser la casa de estudios cercana que impulsa a futuros conciliadores, árbitros y especialistas legales a alcanzar sus metas profesionales.</p></div>
+</div>
+<div style="display: flex; gap: 14px; padding: 16px 18px; background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0;">
+<span style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: #0B1530; color: #FCD34D; display: inline-flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>
+</span>
+<div><h3 style="margin: 0 0 6px; font-size: 17px; color: #0B1530;">Misión</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569;">Ser la institución líder en formar conciliadores, árbitros, mediadores y especialistas jurídicos, y en administrar justicia delegada con eficiencia a través de nuestros centros.</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Cifras -->
+<section style="background: #0B1530; color: #F7F9FC;">
+<div class="wrap stats" style="padding-top: 56px; padding-bottom: 56px;">
+<div class="reveal" style="padding: 12px 32px; display: flex; flex-direction: column; gap: 6px;">
+<span class="serif" style="font-size: 60px; font-weight: 600; color: #FCD34D; line-height: 1;">20</span>
+<span style="font-size: 15px; color: #CBD5E1;">años formando profesionales del Derecho</span>
+</div>
+<div class="reveal" style="padding: 12px 32px; display: flex; flex-direction: column; gap: 6px;">
+<span class="serif" style="font-size: 60px; font-weight: 600; color: #FCD34D; line-height: 1;">4</span>
+<span style="font-size: 15px; color: #CBD5E1;">líneas de formación especializada</span>
+</div>
+<div class="reveal" style="padding: 12px 32px; display: flex; flex-direction: column; gap: 6px;">
+<span class="serif" style="font-size: 60px; font-weight: 600; color: #FCD34D; line-height: 1;">3</span>
+<span style="font-size: 15px; color: #CBD5E1;">centros: arbitraje, conciliación y mediación</span>
+</div>
+</div>
+</section>
+
+<!-- Formación -->
+<section id="formacion" class="sec" style="padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap" style="display: flex; flex-direction: column; gap: clamp(24px, 4vh, 40px);">
+<div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+<span style="color: #2563EB; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Formación</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 46px; line-height: 1.12; font-weight: 800; color: #0B1530;">Programas de especialización</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 1.6; color: #475569;">Elige tu especialidad y cotiza al instante por WhatsApp. Te enviamos fechas, requisitos e inversión.</p>
+</div>
+<div class="g4">
+<article class="card reveal" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; border: 1px solid #E2E8F0; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 10;"><img class="photo ph-in" src="img/arbitros-civiles.jpg" alt="Graduación de árbitros civiles y comerciales"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #2563EB;">01</span>
+<h3 class="serif" style="margin: 0; font-size: 21px; line-height: 1.25; color: #0B1530;">Árbitros Civiles y Comerciales</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569; flex-grow: 1;">Domina el marco legal y el desarrollo del proceso arbitral para ejercer como árbitro en controversias civiles y comerciales.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20cotizar%20el%20curso%20de%20%C3%81rbitros%20Civiles%20y%20Comerciales.">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="card reveal" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; border: 1px solid #E2E8F0; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 10;"><img class="photo ph-in" src="img/conciliadores-familiares.jpg" alt="Práctica de conciliación familiar en CAMPECAM"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #2563EB;">02</span>
+<h3 class="serif" style="margin: 0; font-size: 21px; line-height: 1.25; color: #0B1530;">Conciliadores Familiares</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569; flex-grow: 1;">Especialízate como conciliador en materia familiar —alimentos, tenencia y régimen de visitas— y acompaña acuerdos en temas sensibles.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20cotizar%20el%20curso%20de%20Conciliadores%20Familiares.">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="card reveal" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; border: 1px solid #E2E8F0; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 10;"><img class="photo ph-in" src="img/arbitraje-internacional.jpg" alt="Simulación de audiencia arbitral en el aula"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #2563EB;">03</span>
+<h3 class="serif" style="margin: 0; font-size: 21px; line-height: 1.25; color: #0B1530;">Arbitraje Nacional e Internacional</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569; flex-grow: 1;">Formamos árbitros que actuarán como jueces privados, preparados para administrar justicia en controversias nacionales e internacionales.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20formaci%C3%B3n%20en%20Arbitraje%20Nacional%20e%20Internacional.">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="card reveal" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; border: 1px solid #E2E8F0; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 10;"><img class="photo ph-in" src="img/seminarios.jpg" alt="Participantes de un seminario de CAMPECAM" style="object-position: 30% 50%;"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; color: #2563EB;">04</span>
+<h3 class="serif" style="margin: 0; font-size: 21px; line-height: 1.25; color: #0B1530;">Seminarios, Fórums y Talleres</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569; flex-grow: 1;">Actualización continua en métodos alternativos de resolución de conflictos, con la experiencia de 20 años formando profesionales.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pr%C3%B3ximos%20seminarios%2C%20f%C3%B3rums%20y%20talleres.">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Centros -->
+<section id="centros" class="sec" style="background: #EEF3FF; padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap" style="display: flex; flex-direction: column; gap: clamp(24px, 4vh, 40px);">
+<div class="reveal sec-head">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+<span style="color: #2563EB; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Justicia delegada</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 46px; line-height: 1.12; font-weight: 800; color: #0B1530;">Nuestros centros resuelven tus controversias</h2>
+</div>
+<p style="margin: 0; max-width: 400px; font-size: 16px; line-height: 1.6; color: #334155;">Para personas y empresas que buscan soluciones rápidas, privadas y especializadas, sin pasar por un proceso judicial.</p>
+</div>
+<div class="g3">
+<article class="card reveal" style="background: #FFFFFF; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 9;"><img class="photo ph-in" src="img/centro-arbitraje.jpg" alt="Audiencia en el Centro de Arbitraje de CAMPECAM"></div>
+<div style="padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<h3 class="serif" style="margin: 0; font-size: 26px; color: #0B1530;">Centro de Arbitraje</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #475569; flex-grow: 1;">Un árbitro imparcial decide la controversia de forma privada y especializada, mediante un laudo de cumplimiento obligatorio.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Centro%20de%20Arbitraje.">Solicitar información <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="card reveal" style="background: #0B1530; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 9;"><img class="photo ph-in" src="img/arbitraje-internacional.jpg" alt="Sesión de conciliación en el Centro de Conciliación de CAMPECAM"></div>
+<div style="padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<h3 class="serif" style="margin: 0; font-size: 26px; color: #FFFFFF;">Centro de Conciliación</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #CBD5E1; flex-grow: 1;">Un conciliador facilita el diálogo para que las partes lleguen a un acuerdo, que queda plasmado en un acta con valor legal.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Centro%20de%20Conciliaci%C3%B3n." style="color: #FCD34D;">Solicitar información <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="card reveal" style="background: #FFFFFF; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column;">
+<div class="photo-wrap" style="aspect-ratio: 16 / 9;"><img class="photo ph-in" src="img/centro-mediacion.jpg" alt="Sesión de mediación en el Centro de Mediación de CAMPECAM"></div>
+<div style="padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+<h3 class="serif" style="margin: 0; font-size: 26px; color: #0B1530;">Centro de Mediación</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #475569; flex-grow: 1;">Un mediador neutral ayuda a las partes a recuperar la comunicación y construir sus propias soluciones.</p>
+<a class="link-arrow" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Centro%20de%20Mediaci%C3%B3n.">Solicitar información <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Cómo inscribirte -->
+<section class="sec" style="padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap" style="display: flex; flex-direction: column; gap: clamp(24px, 4vh, 40px);">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
+<span style="color: #2563EB; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Matrícula</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 46px; line-height: 1.12; font-weight: 800; color: #0B1530;">Inscribirte es muy sencillo</h2>
+</div>
+<div class="g3">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;">
+<span class="serif" style="width: 56px; height: 56px; border-radius: 50%; background: #0B1530; color: #FCD34D; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 600;">1</span>
+<h3 style="margin: 0; font-size: 19px; color: #0B1530;">Escríbenos</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569;">Envíanos un WhatsApp al 998 774 832 o llámanos al (01) 427-5172 con el programa que te interesa.</p>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;">
+<span class="serif" style="width: 56px; height: 56px; border-radius: 50%; background: #0B1530; color: #FCD34D; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 600;">2</span>
+<h3 style="margin: 0; font-size: 19px; color: #0B1530;">Recibe la información</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569;">Te enviamos fechas de inicio, requisitos e inversión, y resolvemos todas tus dudas.</p>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;">
+<span class="serif" style="width: 56px; height: 56px; border-radius: 50%; background: #FBBF24; color: #0B1530; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 600;">3</span>
+<h3 style="margin: 0; font-size: 19px; color: #0B1530;">Matricúlate y empieza</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #475569;">Reserva tu vacante y da el siguiente paso en tu carrera profesional.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Preguntas frecuentes -->
+<section id="preguntas" class="sec" style="background: #FFFFFF; padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap g2">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 18px;">
+<span style="color: #2563EB; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Preguntas frecuentes</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 46px; line-height: 1.12; font-weight: 800; color: #0B1530;">Resolvemos tus dudas</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #334155;">¿No encuentras lo que buscas? Escríbenos y te respondemos a la brevedad.</p>
+<a class="btn" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #0B1530; color: #FFFFFF; padding: 15px 24px; border-radius: 999px; font-weight: 700; text-decoration: none;">Hacer una consulta</a>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column;">
+
+<div style="border-bottom: 1px solid #E2E8F0;">
+<button class="faq-btn" aria-expanded="true" aria-controls="faq0">
+<span style="font-size: 18px; font-weight: 600;">¿Qué hace un conciliador extrajudicial?</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500;">−</span>
+</button>
+<p id="faq0" style="margin: 0 0 22px; padding-right: 52px; font-size: 16px; line-height: 1.7; color: #475569;">Facilita el diálogo entre las partes de un conflicto para que lleguen por sí mismas a un acuerdo, sin necesidad de iniciar un juicio.</p>
+</div>
+
+<div style="border-bottom: 1px solid #E2E8F0;">
+<button class="faq-btn" aria-expanded="false" aria-controls="faq1">
+<span style="font-size: 18px; font-weight: 600;">¿En qué se diferencian la conciliación, el arbitraje y la mediación?</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500;">+</span>
+</button>
+<p id="faq1" hidden style="margin: 0 0 22px; padding-right: 52px; font-size: 16px; line-height: 1.7; color: #475569;">En la conciliación y la mediación, un tercero neutral ayuda a que las partes acuerden una solución. En el arbitraje, el árbitro decide la controversia y emite un laudo de cumplimiento obligatorio.</p>
+</div>
+
+<div style="border-bottom: 1px solid #E2E8F0;">
+<button class="faq-btn" aria-expanded="false" aria-controls="faq2">
+<span style="font-size: 18px; font-weight: 600;">¿Cómo me inscribo en un programa?</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500;">+</span>
+</button>
+<p id="faq2" hidden style="margin: 0 0 22px; padding-right: 52px; font-size: 16px; line-height: 1.7; color: #475569;">Escríbenos por WhatsApp al 998 774 832 indicando el programa que te interesa. Te enviaremos fechas, requisitos e inversión.</p>
+</div>
+
+<div style="border-bottom: 1px solid #E2E8F0;">
+<button class="faq-btn" aria-expanded="false" aria-controls="faq3">
+<span style="font-size: 18px; font-weight: 600;">¿Atienden casos además de dictar cursos?</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500;">+</span>
+</button>
+<p id="faq3" hidden style="margin: 0 0 22px; padding-right: 52px; font-size: 16px; line-height: 1.7; color: #475569;">Sí. A través de nuestros centros de arbitraje, conciliación y mediación administramos justicia delegada para personas y empresas.</p>
+</div>
+
+<div style="border-bottom: 1px solid #E2E8F0;">
+<button class="faq-btn" aria-expanded="false" aria-controls="faq4">
+<span style="font-size: 18px; font-weight: 600;">¿Dónde están ubicados?</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #DBEAFE; color: #2563EB; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500;">+</span>
+</button>
+<p id="faq4" hidden style="margin: 0 0 22px; padding-right: 52px; font-size: 16px; line-height: 1.7; color: #475569;">En Jr. Camaná 615, oficina 205, Cercado de Lima. También puedes llamarnos al (01) 427-5172.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="sec" style="background: #1E40AF; color: #FFFFFF; padding-top: 120px; padding-bottom: 120px;">
+<div class="wrap g2" style="align-items: center;">
+<div style="display: flex; flex-direction: column; gap: 22px;">
+<span style="color: #FCD34D; font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;">Contáctanos</span>
+<h2 class="h2 serif" style="margin: 0; font-size: 50px; line-height: 1.08; font-weight: 600; color: #FFFFFF;">Da el siguiente paso en tu carrera</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #E4E8F0; max-width: 480px;">Te asesoramos para elegir el programa ideal o para llevar tu caso a nuestros centros de arbitraje, conciliación o mediación.</p>
+<div style="display: flex; gap: 14px; flex-wrap: wrap;">
+<a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="display: inline-flex; align-items: center; gap: 10px; background: #FBBF24; color: #0B1530; padding: 16px 26px; border-radius: 999px; font-weight: 700; text-decoration: none;">Escribir por WhatsApp</a>
+<a class="btn btn-line" href="tel:+5114275172" style="display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid #FFFFFF; color: #FFFFFF; padding: 16px 26px; border-radius: 999px; font-weight: 600; text-decoration: none;">Llamar al (01) 427-5172</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Jr.+Caman%C3%A1+615+Cercado+de+Lima" style="display: flex; gap: 16px; align-items: center; padding: 22px; border-radius: 18px; background: #FFFFFF; border: 1px solid #FFFFFF; text-decoration: none; color: #0B1530; box-shadow: 0 18px 36px -22px rgba(0,0,0,.6);">
+<span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 14px; background: #FBBF24; color: #0B1530; display: inline-flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 16px;">Jr. Camaná 615, Oficina 205</strong><span style="font-size: 14px; color: #475569;">Cercado de Lima, Lima · Ver en mapa</span></span>
+</a>
+<a target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." style="display: flex; gap: 16px; align-items: center; padding: 22px; border-radius: 18px; background: #FFFFFF; border: 1px solid #FFFFFF; text-decoration: none; color: #0B1530; box-shadow: 0 18px 36px -22px rgba(0,0,0,.6);">
+<span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 14px; background: #FBBF24; color: #0B1530; display: inline-flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 16px;">998 774 832</strong><span style="font-size: 14px; color: #475569;">Móvil y WhatsApp</span></span>
+</a>
+<a href="mailto:campecam@gmail.com" style="display: flex; gap: 16px; align-items: center; padding: 22px; border-radius: 18px; background: #FFFFFF; border: 1px solid #FFFFFF; text-decoration: none; color: #0B1530; box-shadow: 0 18px 36px -22px rgba(0,0,0,.6);">
+<span style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 14px; background: #FBBF24; color: #0B1530; display: inline-flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="22" height="22" class="ic" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 16px;">campecam@gmail.com</strong><span style="font-size: 14px; color: #475569;">Escríbenos tu consulta</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Pie -->
+<footer style="background: #060E22; color: #94A3B8;">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 32px; padding-bottom: 32px; font-size: 14px;">
+<span>© 2026 Cámara Peruana de Conciliación, Arbitraje y Mediación</span>
+<a href="https://www.facebook.com/profile.php?id=100007017467362" style="display: inline-flex; gap: 8px; align-items: center; color: #FCD34D; text-decoration: none; min-height: 44px;">
+<svg viewBox="0 0 24 24" width="20" height="20" class="ic" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3.5h2V21h3.5v-8.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"></path></svg>
+Síguenos en Facebook
+</a>
+</div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<div class="wa-fab">
+<a target="_blank" rel="noopener" href="https://wa.me/51998774832?text=Hola%20CAMPECAM%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20programas%20y%20servicios." aria-label="Escríbenos por WhatsApp" style="width: 60px; height: 60px; border-radius: 50%; background: #1FA855; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 12px 24px -8px rgba(0,0,0,.4);">
+<svg viewBox="0 0 24 24" width="28" height="28" class="ic" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.1A8 8 0 1 1 20 12z"></path><path d="M9 9.5c.3 2 2.5 4.2 4.5 4.5l1-1.2 1.8.8"></path></svg>
+</a>
+</div>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('mobileMenu');
+  function setMenu(open){menu.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');}
+  btn.addEventListener('click',function(){setMenu(menu.hidden);});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  window.addEventListener('resize',function(){if(window.innerWidth>960)setMenu(false);});
+
+  var faqBtns=document.querySelectorAll('.faq-btn');
+  faqBtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.getAttribute('aria-expanded')==='true';
+      faqBtns.forEach(function(o){o.setAttribute('aria-expanded','false');document.getElementById(o.getAttribute('aria-controls')).hidden=true;o.lastElementChild.textContent='+';});
+      if(!open){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false;b.lastElementChild.textContent='\u2212';}
+    });
+  });
+
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in');});return;}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
